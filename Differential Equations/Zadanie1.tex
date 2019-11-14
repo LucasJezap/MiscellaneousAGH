@@ -1,0 +1,109 @@
+\documentclass[12pt]{article}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{gensymb}
+\usepackage{mnsymbol}
+\usepackage{graphicx}
+\usepackage{textgreek}
+\usepackage{float}
+\usepackage{caption}
+\begin{document}
+\newgeometry{tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm}
+\begin{center}
+\Large Łukasz Jezapkowicz
+\end{center}
+\begin{center}
+\Large Rozwiązanie zadania numer 1 
+\end{center}
+Przyjmijmy $I=[a,b]$,$a$,$b\in\mathbb{R}$,$a<b$ oraz odwzorowanie liniowe ciągłe:
+\begin{center}
+\Large $D : C^1(I\to\mathbb{R}^d)\ni{y}\to{Dy}\in{C^0}(I\to\mathbb{R}^d)$
+\end{center}
+takie, że $(Dy(x))_i=D(y_i)(x)$,$i=1,...,d,\forall{x}\in\mathbb{R}$. 
+Przyjmijmy również odwzorowanie ciągłe, którego wartościami są macierze:
+\begin{center}
+\Large $I\ni{x}\to{A}(x)\in\mathbb{R}^d\times\mathbb{R}^d$
+\end{center}
+Wiemy również, że:
+\begin{center}
+\Large $A\in{C}^0(I\to\mathbb{R}^d\times\mathbb{R}^d)$
+\end{center}
+\textbf{{\Large
+Obserwacja $4$: \newline
+1. Odwzorowanie:
+\begin{center}
+$C^0(I\to\mathbb{R}^d)\ni{y}\to{A}y\in{C}^0(I\to\mathbb{R}^d)$
+\end{center}
+spełnia warunek Lipschitza.} \newline
+{\Large  2. Odwzorowanie: 
+\begin{center}
+$I\ni{x}\to{A}(x)y(x)\in\mathbb{R}^d\in{C}^0(I\to\mathbb{R}^d)$
+\end{center}
+jest ciągłe dla każdego $y\in{C}^0(I\to\mathbb{R}^d)$.} \newline
+{\Large 3. Odwzorowanie:
+\begin{center}
+$B : C^1(I\to\mathbb{R}^d)\ni{y}\to{B}(y)=Dy-Ay\in{C}^0(I\to\mathbb{R}^d)$
+\end{center}
+jest liniowe.}} \newpage
+\textbf{Dowód $2$:} \newline
+Z punktu $1$ wiemy, że $y(x)$ jest funkcją ciągłą zaś z wcześniejszych założeń wiemy , że $x\to{Ax}$ jest również ciągłe. By wykazać ciągłość funkcji $f(x)={A}(x)y(x)$ wystarczy więc pokazać, że iloczyn funkcji ciągłych jest ciągły. Funkcja $f$ jest ciągła wtedy i tylko wtedy gdy w każdym punkcie dziedziny istnieje granica $\lim_{x\to{x_0}} f(x)$ i jest ona równa wartości funkcji w punkcie $x_0$ czyli $\lim_{x\to{x_0}} f(x)=f(x_0)$. Definicja Heinego mówi, że dla dowolnego punktu $x_0$ należącego do dziedziny ($I$) oraz dowolnego ciągu $x_n\in{I}$ takiego, że $x_n\to{x_0}$ funkcja jest ciągła w punkcie $x_0$ jeśli spełniony jest warunek $\lim_{n\to\infty} f(x_n)=f(x_0)$. W przestrzeniach metrycznych jest to równoważne sprawdzeniu czy $\lim_{n\to\infty} ||f(x_n)-f(x_0)||=0$. W naszym przypadku sprowadza się do sprawdzenia czy $\lim_{n\to\infty} ||A(x_n)y(x_n)-A(x_0)y(x_0)|| = 0$. Przekształcając nasze wyrażenie mamy:
+\begin{center}
+\large $||A(x_n)y(x_n)-A(x_0)y(x_0)||=||A(x_n)y(x_n)-A(x_n)y(x_0)+A(x_n)y(x_0)-A(x_0)y(x_0)||$
+\end{center}
+Dalej:
+\begin{center}
+\large $||A(x_n)y(x_n)-A(x_n)y(x_0)+A(x_n)y(x_0)-A(x_0)y(x_0)||=||A(x_n)[y(x_n)-y(x_0)]+[A(x_n)-A(x_0)]y(x_0)||$
+\end{center}
+Korzystając z nierówności trójkąta:
+\begin{center}
+\large $||A(x_n)[y(x_n)-y(x_0)]+[A(x_n)-A(x_0)]y(x_0)||\leq||A(x_n)[y(x_n)-y(x_0)||+||[A(x_n)-A(x_0)]y(x_0)||$
+\end{center}
+Korzystając z nierówności ($85$):
+\begin{center}
+\large $||A(x_n)[y(x_n)-y(x_0)||+||[A(x_n)-A(x_0)]y(x_0)||\leq||A(x_n)||*||y(x_n)-y(x_0)||+||A(x_n)-A(x_0)||*||y(x_0)||$
+\end{center}
+Ponieważ $y(x_0)$ oraz $A(x_n)$ są ciągłe to muszą istnieć takie stałe $M$ i $N$, że:
+\begin{center}
+\large $||y(x_0)||\leq{M}$ oraz $||A(x_n)||\leq{N}$
+\end{center}
+Z ciągłości $y$ oraz $A$ wiemy też, że:
+\begin{center}
+\large $||y(x_n)-y(x_0)||\to{0}$ oraz $||A(x_n)-A(x_0)||\to{0}$
+\end{center}
+Co w połączeniu daje:
+\begin{center}
+\large $||A(x_n)||*||y(x_n)-y(x_0)||+||A(x_n)-A(x_0)||*||y(x_0)||\leq{N}*||y(x_n)-y(x_0)||+||A(x_n)-A(x_0)||*M\to{0}$
+\end{center}
+Wszystkie poprzednie nierówności dowodzą, że również:
+\begin{center}
+\large $||A(x_n)y(x_n)-A(x_0)y(x_0)||\to{0}$
+\end{center}
+Teza jest zatem prawdziwa. \newpage
+\textbf{Dowód $3$:} \newline
+Odwzorowanie $Dy$ jest liniowe z założenia. Odwzorowanie $Ay$ również jest odwzorowaniem liniowym, ponieważ iloczyn macierzy z wektorem daje wektor będący kombinacją liniową kolumn macierzy. \newline \newline
+Niech $V$,$W$ będą przestrzeniami wektorowymi nad ciałem $\mathbb{K}$ i niech $f:V\to{W}$ będzie odwzorowaniem. Mówimy, że $f$ jest liniowe, jeśli spełnione są następujące warunki:
+\begin{center}
+\large 1. Dla każdego $u,v\in{V}$  $f(u+v)=f(u)+f(v)$ 
+\end{center}
+\begin{center}
+\large 2. Dla każdego $\lambda\in\mathbb{K}$ oraz $v\in{V}$  $f(\lambda{v})=\lambda{f}(v)$ 
+\end{center}
+\noindent W naszym przypadku:
+\begin{center}
+\large $1. \forall y,z\in{C}^1(I\to\mathbb{R}^d) \newline B(y+z)=D(y+z)-A(y+z)=D(y)+D(z)-A(y)-A(z)=D(y)-A(y)+D(z)-A(z)=B(y)+B(z)$ 
+\end{center}
+Czyli nasze odwzorowanie spełnia pierwszy warunek.
+\begin{center}
+\large $2. \forall \lambda\in\mathbb{K}$ oraz $\forall y\in{C}^1(I\to\mathbb{R}^d) \newline B(\lambda{y})=D(\lambda{y})-A(\lambda{y})=\lambda{D}(y)-\lambda{A}(y)=\lambda(D(y)-A(y))=
+\lambda{B}(y)$
+\end{center}
+Czyli nasze odwzorowanie spełnia również drugi warunek czyli jest liniowe. 
+\end{document}
