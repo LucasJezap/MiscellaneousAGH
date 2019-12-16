@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{gensymb}
+\usepackage{mnsymbol}
+\usepackage{graphicx}
+\usepackage{textgreek}
+\usepackage{float}
+\usepackage{caption}
+\begin{document}
+\newgeometry{tmargin=2cm,bmargin=2cm,lmargin=2cm,rmargin=2cm}
+\begin{center}
+\Large Łukasz Jezapkowicz 305313
+\end{center}
+\begin{center}
+\Large Rozwiązanie zadania numer 2 
+\end{center}
+Niech $\Omega$ - zbiór zdefiniowany na slajdzie $14.5$ oraz $h\in{C}^2(\bar{\Omega}\to\mathbb{R})$. Teza:
+\begin{center}
+\Large $$-\sum_{j,k=1}^{n} D_j(a_{jk}*D_kh)*v = \sum_{j,k=1}^{n}a_{jk}D_kh*D_jv-\sum_{j,k=1}^{n}D_j(a_{jk}*D_khv)$$ \newline
+DOWÓD:
+\end{center} 
+W dowodzie korzystam z twierdzenia o pochodnej iloczynu funkcji: \newline
+Tw. (o pochodnej iloczynu funkcji) \newline
+Niech $f,g\in{C}^1(\mathbb{R}\to\mathbb{R})$ (lub gdy $f,g\in{C}^1(A\subset\mathbb{R}\to\mathbb{R})$. Wtedy: \newline
+\begin{center}
+\Large $D(fg)=Df*g + f*Dg$
+\end{center}
+A zatem korzystając z powyższego twierdzenia: \newline
+\begin{center}
+\Large $D_j(a_{jk}*D_khv) = D_j(a_{jk}*D_kh)*v + a_{jk}D_kh*D_jv$
+\end{center}
+Teraz nakładając na powyższą równość sumowanie po $j,k$ od $1$ do $n$ :
+\begin{center}
+\Large $$\sum_{j,k=1}^{n}D_j(a_{jk}*D_khv) = \sum_{j,k=1}^{n} D_j(a_{jk}*D_kh)*v + \sum_{j,k=1}^{n}a_{jk}D_kh*D_jv$$
+\end{center}
+Po przeniesieniu szeregów na drugie strony:
+\begin{center}
+\Large $$-\sum_{j,k=1}^{n} D_j(a_{jk}*D_kh)*v = \sum_{j,k=1}^{n}a_{jk}D_kh*D_jv-\sum_{j,k=1}^{n}D_j(a_{jk}*D_khv)$$
+\end{center}
+\end{document}
