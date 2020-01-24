@@ -8,4 +8,7 @@ Here are some exercises we had to do on our differential equations lectures and 
 <a href="https://github.com/LucasJezap/MiscellaneousAGH/tree/master/Differential%20Equations/los_examples2.pdf"> Examples 2  
 <a href="https://github.com/LucasJezap/MiscellaneousAGH/tree/master/Differential%20Equations/los_examples3.pdf"> Examples 3  
 <a href="https://github.com/LucasJezap/MiscellaneousAGH/tree/master/Differential%20Equations/los_examples4.pdf"> Examples 4    
+<a href="https://github.com/LucasJezap/MiscellaneousAGH/tree/master/Differential%20Equations/los_examples5.pdf"> Examples 5    
+<a href="https://github.com/LucasJezap/MiscellaneousAGH/tree/master/Differential%20Equations/los_examples6.pdf"> Examples 6    
+<a href="https://github.com/LucasJezap/MiscellaneousAGH/tree/master/Differential%20Equations/los_examples7.pdf"> Examples 7    
 <a href="https://github.com/LucasJezap/MiscellaneousAGH/tree/master/Differential%20Equations/FEM_Solver"> FEM Solver (Matlab)    
